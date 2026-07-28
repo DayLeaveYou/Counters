@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numbers in Counters</title>
+
+    <title>WorldCounters100</title>
 
     <style>
+
+        /* =========================
+           PAGRINDINIAI NUSTATYMAI
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b1628;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2ff;
             color: white;
         }
+
+
+        /* =========================
+           VIRŠUTINĖ ANTRAŠTĖ
+        ========================= */
 
         header {
             text-align: center;
@@ -28,24 +46,63 @@
             color: #b8c7dc;
         }
 
+
+        /* =========================
+           PAGRINDINIS PUSLAPIO PLOTIS
+        ========================= */
+
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
+
+
+        /* =========================
+           3 STULPELIŲ COUNTERIŲ TINKLELIS
+        ========================= */
+
+        .counter-grid {
+            display: grid;
+
+            /* 3 stulpeliai */
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* =========================
+           VIENO COUNTERIO KORTELĖ
+        ========================= */
 
         .counter-card {
             background: #142238;
             border-radius: 12px;
             padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+            box-shadow:
+                0 4px 15px
+                rgba(0, 0, 0, 0.3);
+
+            text-align: center;
         }
+
+
+        /* =========================
+           COUNTERIO PAVADINIMAS
+        ========================= */
 
         .counter-title {
             font-size: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
+
+
+        /* =========================
+           COUNTERIO ŠALTINIS
+        ========================= */
 
         .counter-source {
             color: #4ade80;
@@ -53,11 +110,21 @@
             margin-bottom: 15px;
         }
 
+
+        /* =========================
+           IFRAME
+        ========================= */
+
         iframe {
             display: block;
             margin: auto;
             max-width: 100%;
         }
+
+
+        /* =========================
+           PUSLAPIO APAČIA
+        ========================= */
 
         footer {
             text-align: center;
@@ -65,41 +132,140 @@
             font-size: 13px;
             padding: 30px;
         }
+
+
+        /* =========================
+           TELEFONUOSE - 1 STULPELIS
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .counter-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
-    <h1>🌍 Numbers in Counters</h1>
-    <div class="subtitle">
-        Real-time counters and statistics from around the world
-    </div>
-</header>
 
-<div class="container">
+    <!-- =========================
+         VIRŠUTINĖ ANTRAŠTĖ
+    ========================= -->
 
-    <div class="counter-card">
-        <div class="counter-title">🌍 World Population</div>
+    <header>
 
-        <div class="counter-source">
-            Source: TheWorldCounts.com
+        <h1>🌍 WorldCounters100</h1>
+
+        <div class="subtitle">
+            Real-time counters and statistics from around the world
         </div>
 
-        <iframe
-            title="World Population"
-            src="https://www.theworldcounts.com/embeds/counters/121?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14"
-            style="border: none"
-            height="100"
-            width="300">
-        </iframe>
+    </header>
+
+
+
+    <!-- =========================
+         PAGRINDINIS TURINYS
+    ========================= -->
+
+    <div class="container">
+
+
+        <!-- =========================
+             3 STULPELIŲ TINKLELIS
+        ========================= -->
+
+        <div class="counter-grid">
+
+
+            <!-- =========================
+                 1 COUNTERIS
+            ========================= -->
+
+            <div class="counter-card">
+
+                <div class="counter-title">
+                    🌍 World Population
+                </div>
+
+                <div class="counter-source">
+                    Source: TheWorldCounts.com
+                </div>
+
+                <iframe
+                    title="World Population"
+                    src="https://www.theworldcounts.com/embeds/counters/121?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14"
+                    style="border: none"
+                    height="100"
+                    width="300">
+                </iframe>
+
+            </div>
+
+
+
+            <!-- =========================
+                 2 COUNTERIS
+            ========================= -->
+
+            <div class="counter-card">
+
+                <div class="counter-title">
+                    🌍 Population of Africa
+                </div>
+
+                <div class="counter-source">
+                    Source: TheWorldCounts.com
+                </div>
+
+                <iframe
+                    title="Population of Africa"
+                    src="https://www.theworldcounts.com/embeds/counters/130?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14"
+                    style="border: none"
+                    height="100"
+                    width="300">
+                </iframe>
+
+            </div>
+
+
+            <!-- ČIA VĖLIAU GALIMA PRIDĖTI 3, 4, 5... COUNTERĮ -->
+ <div class="counter-card">
+
+                <div class="counter-title">
+                 🌍 Population of Asia   
+                </div>
+
+                <div class="counter-source">
+                    Source: TheWorldCounts.com
+                </div>
+<iframe title='Population of Asia' src='https://www.theworldcounts.com/embeds/counters/129?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14' style='border: none' height='100' width='300'></iframe>
+        </div>
+
+
     </div>
 
-</div>
 
-<footer>
-    Numbers in Counters
-</footer>
+
+    <!-- =========================
+         PUSLAPIO APAČIA
+    ========================= -->
+
+    <footer>
+
+        WorldCounters100
+
+    </footer>
+
 
 </body>
+
 </html>
+
+
